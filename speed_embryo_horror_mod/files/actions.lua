@@ -1,9 +1,9 @@
-table.insert( actions, --MAGNET_SHOT_ATTRACT
+table.insert( actions,
 {
 	id          = "MAGNET_SHOT_ATTRACT",
-	name 		= "$action_magnet_shot_attract",
-	description = "$actiondesc_magnet_shot_attract",
-	sprite 		= "mods/speed_embryo_horror_mod/files/cards_gfx/magnet_shot_attract.xml,",
+	name 		= "Magnet Shot (Attract)",
+	description = "Projectiles attract other magnetic projectiles",
+	sprite 		= "mods/speed_embryo_horror_mod/files/cards_gfx/magnet_shot_attract.png",
 	sprite_unidentified = "",
 	type 		= ACTION_TYPE_MODIFIER,
 	spawn_level                       = "0,1,2,3,4,5",
@@ -11,18 +11,18 @@ table.insert( actions, --MAGNET_SHOT_ATTRACT
 	price = 50,
 	mana = 10,
 	action 		= function()
-		c.extra_entities = c.extra_entities .. "mods/everythingUP/files/modifiers/magnet_shot_attract.xml,"
-		c.fire_rate_wait = c.fire_rate_wait + 2
+		c.extra_entities = c.extra_entities .. "mods/speed_embryo_horror_mod/files/entities/modifiers/magnet_shot_attract.xml,"
+		c.fire_rate_wait = c.fire_rate_wait + 3
 		
 		draw_actions( 1, true )
 	end,
 } )
-table.insert( actions, --MAGNET_SHOT_REPULSE
+table.insert( actions,
 {
 	id          = "MAGNET_SHOT_REPULSE",
-	name 		= "$action_magnet_shot_repulse",
-	description = "$actiondesc_magnet_shot_repulse",
-	sprite 		= "mods/speed_embryo_horror_mod/files/cards_gfx/magnet_shot_repulse.xml,",
+	name 		= "Magnet Shot (Repulse)",
+	description = "Projectiles repulse other magnetic projectiles",
+	sprite 		= "mods/speed_embryo_horror_mod/files/cards_gfx/magnet_shot_repulse.png",
 	sprite_unidentified = "",
 	type 		= ACTION_TYPE_MODIFIER,
 	spawn_level                       = "0,1,2,3,4,5",
@@ -30,8 +30,8 @@ table.insert( actions, --MAGNET_SHOT_REPULSE
 	price = 50,
 	mana = 10,
 	action 		= function()
-		c.extra_entities = c.extra_entities .. "mods/everythingUP/files/modifiers/magnet_shot_repulse.xml,"
-		c.fire_rate_wait = c.fire_rate_wait + 2
+		c.extra_entities = c.extra_entities .. "mods/speed_embryo_horror_mod/files/entities/modifiers/magnet_shot_repulse.xml,"
+		c.fire_rate_wait = c.fire_rate_wait + 3
 		
 		draw_actions( 1, true )
 	end,
