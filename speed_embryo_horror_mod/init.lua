@@ -31,7 +31,25 @@ end
 function OnWorldPostUpdate() -- This is called every time the game has finished updating the world
 	GamePrint( "Post-update hook " .. tostring(GameGetFrameNum()) )
 end
-
 ]]--
+
+function OnModPreInit()
+--!!TRANSLATIONS (dont edit)!!
+	local actions_enhanced = dofile("mods/speed_embryo_horror_mod/files/scripts/actions_enhanced.lua")
+	for _, value in ipairs(actions_enhanced) do
+		print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" .. [[
+		]].. "action_" .. value.id ..[[,]] .. value.name .. [[,,,,,,,,,,,,,
+		]].. "actiondesc_" .. value.id ..[[,]] .. value.description .. [[,,,,,,,,,,,,,
+		]])
+
+		ModTextFileSetContent("data/translations/common.csv", ModTextFileGetContent("data/translations/common.csv") .. [[
+		]].. "action_" .. value.id ..[[,]] .. value.name .. [[,,,,,,,,,,,,,
+		]].. "actiondesc_" .. value.id ..[[,]] .. value.description .. [[,,,,,,,,,,,,,
+		]])
+	end
+end
+
+--!!FILE APPENDS!!
+ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/speed_embryo_horror_mod/files/scripts/actions_enhanced.lua" )
 
 GamePrint("SPEED EMBRYO HORROR MOD initialized!")
