@@ -1,0 +1,70 @@
+<Entity>
+
+	<InheritTransformComponent>
+    </InheritTransformComponent>
+
+	<GameEffectComponent 
+		effect="CUSTOM"
+		custom_effect_id="IRRADIATED"
+		frames="1200"
+        >
+	</GameEffectComponent>
+
+    <LightComponent
+        _enabled="1" 
+        radius="200" 
+        fade_out_time="0.25"
+        r="0"
+        g="255"
+        b="50"
+        >
+    </LightComponent>
+
+	<SpriteParticleEmitterComponent
+        sprite_file="data/particles/shine_green.xml"
+        delay="0"
+        lifetime="0"
+	    additive="1"
+        color.r="0.1" color.g="1" color.b="0.1" color.a="0.2"
+        color_change.r="0" color_change.g="0" color_change.b="0" color_change.a="-1"
+        velocity.x="0" velocity.y="0"
+        gravity.x="0" gravity.y="0"
+        velocity_slowdown="0"
+        rotation="0"
+        angular_velocity="0"
+        use_velocity_as_rotation="0"
+        scale.x="1" scale.y="1"
+        scale_velocity.x="0" scale_velocity.y="0"
+        emission_interval_min_frames="3"
+        emission_interval_max_frames="5"
+        count_min="0" count_max="1"
+        randomize_rotation.min="-0.3415"
+        randomize_rotation.max="0.3415"
+        randomize_angular_velocity.min="0"
+        randomize_angular_velocity.max="0"
+        randomize_position.min_x="-4"
+        randomize_position.max_x="4"
+        randomize_position.min_y="-8"
+        randomize_position.max_y="8"
+        randomize_velocity.min_x="-10"
+        randomize_velocity.max_x="10"
+        randomize_velocity.min_y="-10"
+        randomize_velocity.max_y="10"
+	    is_emitting="1"
+        >
+  	</SpriteParticleEmitterComponent>
+
+	<LuaComponent 
+	    execute_every_n_frame="1200"
+	    script_source_file="mods/speed_embryo_horror_mod/files/entities/status_effects/scripts/irradiated_modify_perks.lua"
+	></LuaComponent>
+
+    <VariableStorageComponent
+        value_int="0"
+    ></VariableStorageComponent>
+    <LuaComponent 
+	    execute_every_n_frame="30"
+	    script_source_file="mods/speed_embryo_horror_mod/files/entities/status_effects/scripts/irradiated_update_state.lua"
+	></LuaComponent>
+
+</Entity>

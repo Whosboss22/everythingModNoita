@@ -1,7 +1,7 @@
 <Entity>
 
   <LuaComponent
-		script_source_file="mods/speed_embryo_horror_mod/files/scripts/entities/modifiers/magnet_shot_attract.lua"
+		script_source_file="mods/speed_embryo_horror_mod/files/entities/modifiers/scripts/magnet_shot_attract.lua"
 		execute_every_n_frame="1"
 		>
   </LuaComponent>

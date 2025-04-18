@@ -33,7 +33,12 @@ function OnWorldPostUpdate() -- This is called every time the game has finished 
 end
 ]]--
 
+--!!INIT DOFILES!!
+dofile_once("mods/speed_embryo_horror_mod/files/materials/scripts/init_materials.lua")
+
 --!!FILE APPENDS!!
-ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/speed_embryo_horror_mod/files/actions.lua" )
+ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/speed_embryo_horror_mod/files/actions/actions.lua" )
+
+ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/speed_embryo_horror_mod/files/entities/status_effects/status_effects.lua" )
 
 print("SPEED EMBRYO HORROR MOD initialized!")

@@ -1,0 +1,17 @@
+<Entity>
+
+	<InheritTransformComponent>
+    </InheritTransformComponent>
+
+	<GameEffectComponent 
+		effect="CUSTOM"
+		custom_effect_id="INGESTION_RADIATION"
+		frames="1200" >
+	</GameEffectComponent>
+
+	<LuaComponent 
+	    execute_every_n_frame="1"
+	    script_source_file="mods/speed_embryo_horror_mod/files/entities/status_effects/scripts/ingested_radiation.lua"
+	></LuaComponent>
+
+</Entity>

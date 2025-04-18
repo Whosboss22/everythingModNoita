@@ -1,0 +1,30 @@
+<Entity>
+
+	<InheritTransformComponent>
+    </InheritTransformComponent>
+
+	<GameEffectComponent 
+		effect="CUSTOM"
+		custom_effect_id="IRRADIATED"
+		frames="1200" >
+	</GameEffectComponent>
+
+	<LightComponent
+        _enabled="1" 
+        radius="75" 
+        fade_out_time="0.25"
+        r="0"
+        g="255"
+        b="50"
+        >
+    </LightComponent>
+
+	<VariableStorageComponent
+        value_int="0"
+    ></VariableStorageComponent>
+    <LuaComponent 
+	    execute_every_n_frame="30"
+	    script_source_file="mods/speed_embryo_horror_mod/files/entities/status_effects/scripts/irradiated_update_state.lua"
+	></LuaComponent>
+
+</Entity>
