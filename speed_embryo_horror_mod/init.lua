@@ -41,4 +41,6 @@ ModLuaFileAppend( "data/scripts/gun/gun_actions.lua", "mods/speed_embryo_horror_
 
 ModLuaFileAppend( "data/scripts/status_effects/status_list.lua", "mods/speed_embryo_horror_mod/files/entities/status_effects/status_effects.lua" )
 
+ModLuaFileAppend( "data/scripts/perks/perk_list.lua", "mods/cursed_perks/perks.lua" )
+
 print("SPEED EMBRYO HORROR MOD initialized!")
