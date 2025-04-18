@@ -36,3 +36,25 @@ table.insert( actions,
 		draw_actions( 1, true )
 	end,
 } )
+table.insert( actions,
+{
+	id          = "5G_RAY",
+		name 		= "5g ray",
+		description = "5G will be used as a way to control the people. Uranium",
+		sprite 		= "mods/speed_embryo_horror_mod/files/actions/gfx/magnet_shot_repulse.png",
+		sprite_unidentified = "",
+		related_projectiles	= {"mods/speed_embryo_horror_mod/files/entities/projectiles/5g_ray.xml"},
+		type 		= ACTION_TYPE_PROJECTILE,
+		spawn_level                       = "0,1,2", -- 5G_RAY
+		spawn_probability                 = "2,1,0.5", -- 5G_RAY
+		price = -5,
+		mana = 20,
+		--max_uses = -1,
+		action 		= function()
+			add_projectile("mods/speed_embryo_horror_mod/files/entities/projectiles/5g_ray.xml")
+			c.fire_rate_wait = c.fire_rate_wait + 5
+			c.screenshake = c.screenshake + 1
+			c.spread_degrees = c.spread_degrees - 0
+			c.damage_critical_chance = c.damage_critical_chance + 5
+		end,
+} )
