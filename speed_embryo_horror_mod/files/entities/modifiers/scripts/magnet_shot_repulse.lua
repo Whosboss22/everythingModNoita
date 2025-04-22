@@ -24,7 +24,7 @@ for i=1, #target_entities do
 	if (dx ~= 0) then
 		local dir = mod_utils.Atan2pi(dy, dx)
 		local dist = math.sqrt(dx^2 + dy^2)
-		local accel_magnitude = math.max(-50, math.min(magnet_coefficient / dist^3, 50))
+		local accel_magnitude = math.max(-2000, math.min(magnet_coefficient / dist^3, 2000))
 
 		netAccelX = netAccelX + accel_magnitude * math.cos(dir)
 		netAccelY = netAccelY + accel_magnitude * math.sin(dir)

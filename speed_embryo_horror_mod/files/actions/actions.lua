@@ -38,6 +38,25 @@ table.insert( actions,
 } )
 table.insert( actions,
 {
+	id          = "STAKE",
+	name 		= "Stake",
+	description = "Attaches to enemies",
+	sprite 		= "mods/speed_embryo_horror_mod/files/actions/gfx/stake.png",
+	sprite_unidentified = "",
+	related_projectiles	= {"mods/speed_embryo_horror_mod/files/entities/projectiles/stake.xml"},
+	type 		= ACTION_TYPE_PROJECTILE,
+	spawn_level                       = "1,2,3,4",
+	spawn_probability                 = "1,0.6,0.4,1",
+	price = 75,
+	mana = 30,
+	action 		= function()
+		add_projectile("mods/speed_embryo_horror_mod/files/entities/projectiles/stake.xml")
+		c.fire_rate_wait = c.fire_rate_wait + 25
+		shot_effects.recoil_knockback = 40.0
+	end,
+} )
+table.insert( actions,
+{
 	id          = "5G_RAY",
 		name 		= "5g ray",
 		description = "5G will be used as a way to control the people. Uranium",
